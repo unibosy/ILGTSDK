@@ -142,7 +142,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="core\operation_generate_box.h" />
+    <ClInclude Include="include\common.h" />
     <ClInclude Include="include\enum.h" />
+    <ClInclude Include="include\operationmanager.h" />
+    <ClInclude Include="util\utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="core\operationmanager.cpp" />
+    <ClCompile Include="core\operation_generate_box.cpp" />
+    <ClCompile Include="util\utility.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

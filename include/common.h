@@ -1,7 +1,6 @@
 #pragma once
-
 /*
-  Copyright (c) 2016 by unibosy@gmail.com 
+  Copyright (c) 2017 by unibosy@gmail.com 
   This file is part of the unibosy library. https://github.com/unibosy
 
   This software is distributed under a license. The full license
@@ -12,22 +11,7 @@
   This software is distributed without any warranty.
 */
 
-enum Direction
-{
-  UP = 0,
-  DOWN = 1,
-  LEFT = 2,
-  RIGHT = 3
-};
 
-
-enum BoxShape
-{
-  IBOX = 0,
-  JBOX = 1,
-  LBOX = 2,
-  OBOX = 3,
-  SBOX = 4,
-  TBOX = 5,
-  ZBOS =6
-};
+#define OP_SUCCESS 0
+#define OP_FAIL -1
+#define OP_FATAL -999

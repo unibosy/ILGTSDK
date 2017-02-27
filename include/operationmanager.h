@@ -1,5 +1,3 @@
-#pragma once
-
 /*
   Copyright (c) 2016 by unibosy@gmail.com 
   This file is part of the unibosy library. https://github.com/unibosy
@@ -11,23 +9,26 @@
 
   This software is distributed without any warranty.
 */
-
-enum Direction
+#pragma once
+#include "common.h"
+//operate type, such as like login, logout, pause and so on
+enum OP_TYPE
 {
-  UP = 0,
-  DOWN = 1,
-  LEFT = 2,
-  RIGHT = 3
+  LOGIN = 0,
+  LOGOUT = 1,
+  GETNEXTBOX,
+  UNKNOWN = 999
 };
 
-
-enum BoxShape
+class OperationManager
 {
-  IBOX = 0,
-  JBOX = 1,
-  LBOX = 2,
-  OBOX = 3,
-  SBOX = 4,
-  TBOX = 5,
-  ZBOS =6
+public:
+  OperationManager();
+  ~OperationManager();
+public:
+  virtual int invoke(OP_TYPE optype, void* resinfo, void* param);
+  virtual int invoke_param(void* resinfo, void* param);
+
+private:
+
 };
